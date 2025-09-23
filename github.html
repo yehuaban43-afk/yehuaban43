@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>yuanxue - 個人簡介</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <nav>
+                <a href="#hero" class="logo">yuanxue</a>
+                <ul>
+                    <li><a href="#about">關於我</a></li>
+                    <li><a href="#projects">專案</a></li>
+                    <li><a href="#contact">聯絡</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero" class="hero-section">
+        <div class="container">
+            <h1>yuanxue</h1>
+            <p>hi</p>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2>關於我</h2>
+            <p>
+                我是一位充滿熱情的前端開發者，專注於利用 HTML 和 CSS 創造優雅且功能強大的網頁體驗。我對「關注點分離」原則有深入理解，並致力於編寫清晰、可維護的程式碼。憑藉對最新網頁技術的敏銳洞察力，我能將設計理念轉化為響應式且用戶友好的介面。
+            </p>
+        </div>
+    </section>
+
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <h2>我的專案</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>響應式作品集網站</h3>
+                    <p>負責從零開始構建一個完全響應式的個人作品集網站，展示我的前端技能。該網站採用現代設計風格，並優化了不同設備上的顯示效果。</p>
+                </div>
+                <div class="project-card">
+                    <h3>互動式資料視覺化介面</h3>
+                    <p>開發了一個基於 D3.js 的互動式儀表板，用於呈現複雜的數據。專注於提升用戶體驗，確保數據的易讀性和互動性。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>聯絡方式</h2>
+            <a href="mailto:your.email@example.com" class="btn-email">發送 Email 給我</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="social-links">
+                <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </div>
+            <p>&copy; 2025 yuanxue</p>
+        </div>
+    </footer>
+</body>
+</html>/* 通用樣式 */
+:root {
+    --bg-color: #1a202c;
+    --card-bg-color: #2d3748;
+    --accent-color: #4fd1c5;
+    --text-color: #f7fafc;
+    --light-text-color: #cbd5e0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    filter: brightness(1.2); /* 純 CSS 替代方案 */
+}
+
+/* 導覽列 (Navbar) */
+.navbar {
+    background-color: var(--card-bg-color);
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--accent-color);
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar ul li {
+    margin-left: 2rem;
+}
+
+.navbar ul li a {
+    color: var(--light-text-color);
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 0.5rem 0;
+    position: relative;
+}
+
+.navbar ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent-color);
+    transition: width 0.3s ease;
+}
+
+.navbar ul li a:hover::after,
+.navbar ul li a.active::after {
+    width: 100%;
+}
+
+/* 英雄區塊 (Hero Section) */
+.hero-section {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(rgba(26, 32, 44, 0.8), rgba(26, 32, 44, 0.8)), url('https://picsum.photos/1920/1080?grayscale&blur=5') no-repeat center center/cover;
+    padding: 4rem 0;
+}
+
+.hero-section h1 {
+    font-size: 4.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--accent-color);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-section p {
+    font-size: 1.8rem;
+    color: var(--light-text-color);
+    margin-top: 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* 內容區塊通用樣式 */
+section {
+    padding: 6rem 0;
+    text-align: center;
+}
+
+section:nth-of-type(even) {
+    background-color: var(--card-bg-color);
+}
+
+section h2 {
+    font-size: 3rem;
+    margin-bottom: 2.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+section h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+    width: 80px;
+    height: 4px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+}
+
+
+/* 關於我 (About Me) */
+.about-section .container {
+    max-width: 800px;
+    text-align: left;
+}
+
+.about-section p {
+    font-size: 1.15rem;
+    color: var(--light-text-color);
+    margin-bottom: 1rem;
+}
+
+/* 專案 (Projects) */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.project-card {
+    background-color: var(--card-bg-color);
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.project-card h3 {
+    color: var(--accent-color);
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.project-card p {
+    color: var(--light-text-color);
+    font-size: 1rem;
+}
+
+/* 聯絡方式 (Contact) */
+.contact-section .btn-email {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-top: 2rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-section .btn-email:hover {
+    filter: brightness(1.1);
+    transform: translateY(-3px);
+}
+
+/* 頁尾 (Footer) */
+.footer {
+    background-color: var(--card-bg-color);
+    padding: 2rem 0;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer .social-links a {
+    color: var(--light-text-color);
+    margin: 0 1rem;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.footer .social-links a:hover {
+    color: var(--accent-color);
+}
+
+.footer p {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: var(--light-text-color);
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+    .navbar .container {
+        flex-direction: column;
+    }
+
+    .navbar ul {
+        margin-top: 1rem;
+    }
+
+    .navbar ul li {
+        margin: 0 0.8rem;
+    }
+
+    .hero-section h1 {
+        font-size: 3rem;
+    }
+
+    .hero-section p {
+        font-size: 1.4rem;
+    }
+
+    section {
+        padding: 4rem 0;
+    }
+
+    section h2 {
+        font-size: 2.5rem;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar .logo {
+        font-size: 1.5rem;
+    }
+
+    .navbar ul li a {
+        font-size: 1rem;
+    }
+
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-section p {
+        font-size: 1.2rem;
+    }
+
+    section h2 {
+        font-size: 2rem;
+    }
+
+    .about-section p {
+        font-size: 1rem;
+    }
+
+    .project-card {
+        padding: 1.5rem;
+    }
+
+    .project-card h3 {
+        font-size: 1.5rem;
+    }
+
+    .btn-email {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .footer .social-links a {
+        font-size: 1rem;
+        margin: 0 0.5rem;
+    }
+}
