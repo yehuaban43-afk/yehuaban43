@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[雪] - 個人簡介</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0PzTJ+LFM3H2rZJ/K8n0gA8f1G9tI3/t3+6E/fFwF2gQfBwA+Q5w5E6Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <nav>
+                <a href="#hero" class="logo">[雪]</a>
+                <ul>
+                    <li><a href="#about">關於我</a></li>
+                    <li><a href="#projects">專案</a></li>
+                    <li><a href="#contact">聯絡</a></li>
+                    <li><button id="theme-toggle" class="theme-toggle-btn"><i class="fas fa-moon"></i> 切換模式</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero" class="hero-section">
+        <div class="container">
+            <h1>[雪]</h1>
+            <p>[hi]</p>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2>關於我</h2>
+            <p>
+                我是一位熱衷於前端技術的網頁開發者，擅長使用 HTML、CSS 和 JavaScript 構建直觀且響應式的用戶界面。在大學期間，我積極參與多項專案開發，累積了豐富的實作經驗。我樂於學習新技術，並享受解決問題的過程，期待能將我的技能應用於有影響力的產品中。
+            </p>
+        </div>
+    </section>
+
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <h2>我的專案</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>電商網站前端開發</h3>
+                    <p>負責開發一個響應式電商網站的前端界面，包含商品瀏覽、購物車與結帳流程。使用 React.js 構建組件，並整合 RESTful API。</p>
+                </div>
+                <div class="project-card">
+                    <h3>待辦事項應用程式</h3>
+                    <p>一個基於 Vue.js 的單頁式待辦事項應用程式，具備新增、編輯、刪除和標記完成等功能。後端使用 Node.js 實現簡單的 API。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>聯絡方式</h2>
+            <a href="mailto:[yehuaban43@gmail.com]" class="btn-email">
+                <i class="fas fa-envelope"></i> 發送 Email 給我
+            </a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="social-links">
+                <a href="https://github.com/[您的GitHub使用者名稱]" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="https://linkedin.com/in/[您的LinkedIn使用者名稱]" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+            </div>
+            <p>&copy; 2025 [雪]</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript 檔案必須在 </body> 標籤之前引入 -->
+    <script src="script.js"></script>
+</body>
+</html>
