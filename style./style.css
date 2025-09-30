@@ -1,16 +1,16 @@
 /* 通用樣式 */
 :root {
-    --bg-color-dark: #1a202c;
-    --card-bg-color-dark: #2d3748;
-    --accent-color-dark: #4fd1c5;
+    --bg-color-dark: #f1c7ea;
+    --card-bg-color-dark: #ffa7f0;
+    --accent-color-dark: #fd69bb;
     --text-color-dark: #f7fafc;
     --light-text-color-dark: #cbd5e0;
 
-    --bg-color-light: #f7fafc;
+    --bg-color-light: #f8eaf5;
     --card-bg-color-light: #ffffff;
-    --accent-color-light: #805ad5; /* 紫色調 */
-    --text-color-light: #2d3748;
-    --light-text-color-light: #4a5568;
+    --accent-color-light: #ff69d2; /* 紫色調 */
+    --text-color-light: #800b45;
+    --light-text-color-light: #ff9dd9;
 }
 
 html {
